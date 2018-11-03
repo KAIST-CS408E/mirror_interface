@@ -1,7 +1,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  background: #faf8ef;
+  background: #000000;
   color: #776E65;
   font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: 18px;
@@ -23,6 +23,7 @@ h1.title {
   margin: 0;
   display: block;
   float: left;
+  color: white;
 }
 
 @-webkit-keyframes $animation-name {
@@ -516,10 +517,12 @@ hr {
 
 .game-intro {
   margin-bottom: 0;
+  color: white;
 }
 
 .game-explanation {
   margin-top: 50px;
+  color: white;
 }
 
 @media screen and (max-width: 480px) {
