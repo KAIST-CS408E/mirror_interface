@@ -1,65 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<head>
+  <meta charset="UTF-8">
+  <title>2048 game</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
 
-    <title>Sound Localization</title>
+  
+</head>
 
-    <!-- Bootstrap core CSS -->
-    <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
 
-    <link href="css/style.css" rel="stylesheet">  
-    <script src="main_controller.js"></script>
+  <div class="container">
+  <div class="heading">
+    <h1 class="title">2048</h1>
+    <div class="score-container">0</div>
+  </div>
+  <p class="game-intro">Join the numbers and get to the <strong>2048 tile!</strong></p>
 
-  </head>
-
-  <body>
-    <div class="container">
-      <div class="heading">
-        <h1 class="title">2048</h1>
-        <div class="score-container">0</div>
+  <div class="game-container">
+    <div class="game-message">
+      <p></p>
+      <div class="lower">
+        <a class="retry-button">Try again</a>
       </div>
-      <p class="game-intro">Join the numbers and get to the <strong>2048 tile!</strong></p>
+    </div>
 
-      <div class="game-container">
-        <div class="game-message">
-          <p></p>
-          <div class="lower">
-            <a class="retry-button">Try again</a>
-          </div>
-        </div>
-
-        <div class="grid-container">
-          <div class="grid-row">
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-          </div>
-          <div class="grid-row">
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-          </div>
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
+    <div class="grid-container">
+      <div class="grid-row">
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
       </div>
+      <div class="grid-row">
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+      </div>
+      <div class="grid-row">
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+      </div>
+      <div class="grid-row">
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+      </div>
+    </div>
 
     <div class="tile-container">
 
@@ -69,23 +64,17 @@
   <p class="game-explanation">
     <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same number touch, they <strong>merge into one!</strong>
   </p>
-  <hr>
-  <p>
-  Created by <a href="http://gabrielecirulli.com" target="_blank">Gabriele Cirulli.</a> Based on <a href="https://itunes.apple.com/us/app/1024!/id823499224" target="_blank">1024 by Veewo Studio</a> and conceptually similar to <a href="http://asherv.com/threes/" target="_blank">Threes by Asher Vollmer.</a>
-  </p>
+
 </div>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/hammer.js/1.0.6/hammer.min.js'></script>
+
+  
+
+    <script  src="js/controller.js"></script>
 
 
 
 
-
-
-
-
-
-
-
-
-  </body>
+</body>
 
 </html>
