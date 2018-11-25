@@ -10,16 +10,16 @@
     <title>Sound Localization</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 
     <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet">  
-    <link href='css/calendar1.css' rel='stylesheet' />
-    <link href='css/calendar2.css' rel='stylesheet' />
-    <link href='css/calendar3.css' rel='stylesheet' />
+    <link href="../css/style.css" rel="stylesheet">  
+    <link href='../css/calendar1.css' rel='stylesheet' />
+    <link href='../css/calendar2.css' rel='stylesheet' />
+    <link href='../css/calendar3.css' rel='stylesheet' />
 
 
   </head>
@@ -31,7 +31,14 @@
       <!-- Heading Row -->
       <div class="row md-4">
         <div class="col-lg-8">
-          <h1 id="hello_message"></h1>
+
+        <div class="col-md-4 mb-4">
+          <a href="javascript:history.back()" id="back_button" class="mybtn btn btn-block">
+            <i style=" font-size: 30px; padding-top: 20px;" class="fa fa-chevron-left"></i> Home
+          </a>
+        </div>
+
+
         </div>
         <!-- /.col-lg-8 -->
         <div class="col-lg-4">
@@ -54,23 +61,7 @@
     <div class="container">
       <!-- Heading Row -->
       <div class="row md-4">
-        <!-- THE WEATHER -->
-        <div id="weather_page" class="col-lg-12">
-          <div align="center" style="margin-top: 40px; z-index:-1;position:relative;">
 
-            <a class="weatherwidget-io" href="https://forecast7.com/en/36d35127d38/daejeon/" data-label_1="DAEJEON" data-label_2="WEATHER" data-theme="dark" style="width: 699px; transform: scale(1.6, 1.7)" onclick="return dummy()"></a>
-          </div>
-
-
-        </div>
-        <!-- THE WEATHER -->
-        <!-- /.col-md-4 -->
-        <!-- CALENDAR -->
-        <div id="calendar_page" class="col-lg-12" >
-          <div id='cpcal_planyonet' class='cp_calendar cp_units_30 ' ></div>
-          <div id='cp_fetch_cpcal_planyonet' class='cp_fetching' style='position:absolute;left:200px;top:10px;display:none;z-index:999;'><img src='https://www.planyo.com/images/hourglass.gif' /></div>
-
-        </div>
         <!-- CALENDAR -->
 
 
@@ -149,45 +140,15 @@
 
 
 
-      <!-- Content Row -->
-      <div class="modes">
-    <div style="position: fixed; bottom: 0; margin: auto; left: 0; right: 0;" class="container">
-      <div class="row">
-        <div class="col-md-4 mb-4">
-          <a href="#" id="weather_page_button" class="mybtn btn btn-block btn-outline-secondary"><i style="padding-right: 20px; font-size: 50px; " class="fa fa-cloud"></i> Weather</a>
-        </div>
-        <div class="col-md-4 mb-4">
-          <a href="calendar/index.html" id="calendar_page_button" class="mybtn btn btn-block btn-outline-secondary"><i style="padding-right: 20px; font-size: 50px; " class="fa fa-calendar"></i> Calendar</a>
-        </div>
-        <div class="col-md-4 mb-4">
-          <a href="musicplayer/index.html" id="player_page_button" class="mybtn btn btn-block btn-outline-secondary"><i style="padding-right: 20px; font-size: 50px; " class="fa fa-music"></i> Music Player</a>
-        </div>
-      </div>
-
-
-      <div class="row">
-        <div class="col-md-4 mb-4">
-          <a href="#" id="games_page_button" class="mybtn btn btn-block btn-outline-secondary"><i style="padding-right: 20px; font-size: 50px; " class="fa fa-gamepad"></i> Games </a>
-        </div>
-        <div class="col-md-4 mb-4">
-          <a href="#" id="wardrobe_page_button" class="mybtn btn btn-block btn-outline-secondary"><i style="padding-right: 20px; font-size: 50px; " class="fas fa-tshirt"></i> Wardrobe </a>
-        </div>
-        <div class="col-md-4 mb-4">
-          <a href="#" id="house_page_button" class="mybtn btn btn-block btn-outline-secondary"><i style="padding-right: 20px; font-size: 50px; " class="fa fa-home"></i> My House</a>
-        </div>
-      </div>
-
-    </div>
-  </div>
 
 
 
     <!-- Bootstrap core JavaScript -->
-    <script src="libs/jquery/jquery.min.js"></script>
+    <script src="../libs/jquery/jquery.min.js"></script>
     <script src='https://www.planyo.com/libs/planyonet-fc.js'></script>
     <script src='https://www.planyo.com/embed-schedule.js'></script>
-    <script src="libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="main_controller.js"></script>
+    <script src="../libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="controller.js"></script>
     
     <script >
       function dummy() { 
@@ -195,18 +156,7 @@
       }
 
   
-      $(".weatherwidget-io").click(function(e){
-        e.preventDedault()
-        return false
-      })
-      $(".weatherInfo").click(function(e){
-        e.preventDedault()
-        return false
-      })
-
-       $("#weather_page a").click(function(e) {
-          e.preventDefault();
-        });
+      
 
 
     </script>
