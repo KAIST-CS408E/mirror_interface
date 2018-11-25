@@ -21,26 +21,19 @@
 
   <body>
 
-
-    <h1>Model</h1>
+    <div class="row">
+      <h1 style="text-alig">Model</h1>  
+    </div>
+    
 
     <canvas id="viewport"></canvas>
-
-    
 
     <script>
         
       var canvas = document.getElementById('viewport'),
       context = canvas.getContext('2d');
       canvas.width = 400;
-      canvas.height = 800;      
-
-
-
-      //cap of person
-
-
-
+      canvas.height = 800;
    
       function wear_pants() {
         pants = new Image(175, 350);
@@ -97,9 +90,6 @@
       }      
 
       wear_shoes();
-
-
-
 
     </script>
   </body>
