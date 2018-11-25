@@ -23,24 +23,7 @@
 
 
     <h1>Model</h1>
-<!--     <div class="container main-window">
-      <br>
-      <br>
-      <div class="row">
-        <div class="col-md-12 col-sm-12"><h1>My Wardrobe</h1></div>
-      </div>
-      <br><br>
-      <div class="row align-middle">
-        <div class="col-md-12 col-sm-12">
-          <div class="wdb-nav-card">
-          </div>
 
-        </div>
-
-      </div>
-
-    </div>
- -->
     <canvas id="viewport"></canvas>
 
     
@@ -50,37 +33,71 @@
       var canvas = document.getElementById('viewport'),
       context = canvas.getContext('2d');
       canvas.width = 400;
-      canvas.height = 700;      
+      canvas.height = 800;      
 
-      // watch = new Image(300, 300);
-      // watch.src = 'ninja-slider/img/watch.png';
-      // watch.onload = function(){
-      //   context.drawImage(this, 0, 0, 300, 300);
-      // }
 
-      pants = new Image(150, 300);
-      pants.src = 'ninja-slider/img/pants.png';
-      pants.onload = function(){
-        context.drawImage(this, 125, 320, 150, 350);
-      }     
 
-      // shirt = new Image(200, 200);
-      // shirt.src = 'ninja-slider/img/shirt.png';
-      // shirt.onload = function(){
-      //   context.drawImage(this, 0, 0, 300, 300);
-      // }
+      //cap of person
 
-      coat = new Image(300, 340);
-      coat.src = 'ninja-slider/img/coat.png';
-      coat.onload = function(){
-        context.drawImage(this, 50, 120, 300, 300);
+
+
+   
+      function wear_pants() {
+        pants = new Image(175, 350);
+        pants.src = '../images/wardrobe/new_clothes/pants.png';
+        pants.onload = function(){
+          context.drawImage(this, 113, 375, 175, 350);
+          wear_shirt();
+        }  
       }
 
-      head = new Image(90, 130);
-      head.src = 'ninja-slider/img/head.png';
-      head.onload = function(){
-        context.drawImage(this, 155, 10, 90, 130);
+      function wear_shirt() {
+        shirt = new Image(275, 275);
+        shirt.src = '../images/wardrobe/new_clothes/shirt.png';
+        shirt.onload = function(){
+          this.zIndex = 1000;
+          context.drawImage(this, 62, 125, 275, 275);
+          wear_coat();
+        }  
       }
+
+      function wear_coat() {
+        coat = new Image(325, 325);
+        coat.src = '../images/wardrobe/new_clothes/coat.png';
+        coat.onload = function(){
+          context.drawImage(this, 37, 100, 325, 325);
+          wear_head();
+        }  
+      }
+
+      function wear_head() {
+        head = new Image(100, 100);
+        head.src = '../images/wardrobe/new_clothes/head.png';
+        head.onload = function(){
+          context.drawImage(this, 137, 13, 125, 125);
+          wear_cap();
+        }
+      }
+
+      function wear_cap() {
+        cap_hat = new Image(125, 75);
+        cap_hat.src = '../images/wardrobe/new_clothes/cap.png';
+        cap_hat.onload = function(){
+          context.drawImage(this, 135, -12, 125, 75);
+        }  
+      }
+
+      function wear_shoes() {
+        shoe = new Image(175, 100);
+        shoe.src = '../images/wardrobe/new_clothes/shoe.png';
+        shoe.onload = function(){
+          context.drawImage(this, 117, 700, 175, 100);
+          wear_pants();
+        }  
+      }      
+
+      wear_shoes();
+
 
 
 
