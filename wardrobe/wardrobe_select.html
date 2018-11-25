@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>My Wardrobe</title>
+    <!-- Bootstrap core CSS -->
+    <link href="../libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Custom styles for this template -->
+    <link href="style.css" rel="stylesheet">
+  
+  <style>
+    canvas#viewport { border: 1px solid white; margin-left: 200px;}
+  </style>
+
+  </head>
+
+  <body>
+
+
+    <h1>Model</h1>
+<!--     <div class="container main-window">
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-md-12 col-sm-12"><h1>My Wardrobe</h1></div>
+      </div>
+      <br><br>
+      <div class="row align-middle">
+        <div class="col-md-12 col-sm-12">
+          <div class="wdb-nav-card">
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+ -->
+    <canvas id="viewport"></canvas>
+
+    
+
+    <script>
+        
+      var canvas = document.getElementById('viewport'),
+      context = canvas.getContext('2d');
+      canvas.width = 400;
+      canvas.height = 700;      
+
+      // watch = new Image(300, 300);
+      // watch.src = 'ninja-slider/img/watch.png';
+      // watch.onload = function(){
+      //   context.drawImage(this, 0, 0, 300, 300);
+      // }
+
+      pants = new Image(150, 300);
+      pants.src = 'ninja-slider/img/pants.png';
+      pants.onload = function(){
+        context.drawImage(this, 125, 320, 150, 350);
+      }     
+
+      // shirt = new Image(200, 200);
+      // shirt.src = 'ninja-slider/img/shirt.png';
+      // shirt.onload = function(){
+      //   context.drawImage(this, 0, 0, 300, 300);
+      // }
+
+      coat = new Image(300, 340);
+      coat.src = 'ninja-slider/img/coat.png';
+      coat.onload = function(){
+        context.drawImage(this, 50, 120, 300, 300);
+      }
+
+      head = new Image(90, 130);
+      head.src = 'ninja-slider/img/head.png';
+      head.onload = function(){
+        context.drawImage(this, 155, 10, 90, 130);
+      }
+
+
+
+    </script>
+  </body>
+
+
+
+</html>
