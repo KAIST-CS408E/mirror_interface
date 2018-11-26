@@ -20,81 +20,122 @@
       <br>
       <br>
       <div class="row">
-        <div class="col-md-12"><h1>My Wardrobe</h1></div>
+        <div class="col-md-12 col-sm-12"><h1>My Wardrobe</h1></div>
       </div>
       <br><br>
       <div class="row align-middle">
         
-        <div class="col-md-3  main-card-wdb">
+        <div class="col-md-3 col-sm-3 main-card-wdb">
           <div class="wdb-nav-card">
             <!-- category icon here -->
             <div class="icon-pic">
               <img src="../images/wardrobe/shirt_white.png" width="100%">
             </div>
-            <h2>Shirts</h2>  
+            <h4>Shirts</h4>  
           </div>
         </div>
         
-        <div class="col-md-3  main-card-wdb">
+        <div class="col-md-3 col-sm-3 main-card-wdb">
           <div class="wdb-nav-card">
             <!-- category icon here -->
             <div class="icon-pic">
               <img src="../images/wardrobe/dress_white.png" width="100%">
             </div>
-            <h2>Dresses</h2>  
+            <h4>Dresses</h4>  
           </div>
         </div>
         
-        <div class="col-md-3  main-card-wdb">
+        <div class="col-md-3 col-sm-3 main-card-wdb">
           <div class="wdb-nav-card">
             <!-- category icon here -->
             <div class="icon-pic">
               <img src="../images/wardrobe/pants_white.png" width="100%">
             </div>
-            <h2>Pants</h2>  
+            <h4>Pants</h4>  
           </div>
         </div>
 
-        <div class="col-md-3  main-card-wdb">
+        <div class="col-md-3 col-sm-3 main-card-wdb">
           <div class="wdb-nav-card">
             <!-- category icon here -->
             <div class="icon-pic">
               <img src="../images/wardrobe/coat_white.png" width="100%">
             </div>
-            <h2>Coats</h2>  
+            <h4>Coats</h4>  
           </div>
         </div>
         
-        <div class="col-md-3  main-card-wdb"></div>
+        <div class="col-md-2 col-sm-2 main-card-wdb"></div>
         
-        <div class="col-md-3">
+        <div class="col-md-4 col-sm-4">
           <div class="wdb-nav-card">
             <!-- category icon here -->
             <div class="icon-pic">
               <img src="../images/wardrobe/shoe_white.png" width="100%">
             </div>
-            <h2>Shoes</h2>  
+            <h4>Shoes</h4>  
           </div>
         </div>
         
-        <div class="col-md-3 main-card-wdb">
+        <div class="col-md-4 col-sm-4 main-card-wdb">
           <div class="wdb-nav-card">
             <!-- category icon here -->
             <div class="icon-pic">
               <img src="../images/wardrobe/accessory_white.png" width="100%">
             </div>
-            <h2>Accessories</h2>  
+            <h4>Accessories</h4>  
           </div>
         </div>  
 
-        <div class="col-md-3  main-card-wdb"></div>
+        <div class="col-md-2 col-sm-2 main-card-wdb"></div>
       </div>
+      <br><br><br>
+      <div class="row">
+        <div class="col-md-6 col-sm-6 center_aligned"><h4>Today's Weather</h4></div>
+        <div class="col-md-6 col-sm-6 center_aligned"><h4>Today's Recommendation</h4></div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 col-sm-6">
+          <div class="wdb-model-card">
+            <!-- category icon here -->
+            <div class="icon-pic">
+              <a class="weatherwidget-io" href="https://forecast7.com/en/36d35127d38/daejeon/" data-label_1="DAEJEON" data-label_2="WEATHER" data-theme="dark" style="width: 100%; transform: scale(1, 1); enabled: false ; max-width : 270px; margin: auto" onclick="return dummy()"></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+          <div class="wdb-model-card">
+            <!-- category icon here -->
+            <div class="icon-pic">
+              <img src="../images/wardrobe/model_v2.png" width="100%">
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
+    <script >
+      function dummy() { 
+        return false;
+      }
+      // THE WEATHER
+      !function(d,s,id){ 
+        var js,fjs = d.getElementsByTagName(s)[0];
 
+        if(!d.getElementById(id)){
+          js = d.createElement(s);
+          js.id =id;
+          js.src='https://weatherwidget.io/js/widget.min.js';
+          fjs.parentNode.insertBefore(js,fjs);
+        }
+      }(document,'script','weatherwidget-io-js');
 
-
+    </script>
 
   </body>
+
+
 
 </html>
