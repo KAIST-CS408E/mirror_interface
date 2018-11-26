@@ -83,6 +83,10 @@ GameManager.prototype.moveTile = function (tile, cell) {
   tile.updatePosition(cell);
 };
 
+var alpha = function(msg){
+  alert(msg);
+}
+
 // Move tiles on the grid in the specified direction
 GameManager.prototype.move = function (direction) {
   // 0: up, 1: right, 2:down, 3: left
@@ -518,8 +522,6 @@ KeyboardInputManager.prototype.restart = function (event) {
 
 
 
-
-
 function Tile(position, value) {
   this.x                = position.x;
   this.y                = position.y;
@@ -537,3 +539,30 @@ Tile.prototype.updatePosition = function (position) {
   this.x = position.x;
   this.y = position.y;
 };
+
+
+//2048 controllers
+document.getElementById("up2048").addEventListener("click", function(){
+  var evt = new KeyboardEvent('keydown', {'keyCode':38, 'which':38});
+  document.dispatchEvent (evt);
+});
+
+document.getElementById("left2048").addEventListener("click", function(){
+  var evt = new KeyboardEvent('keydown', {'keyCode':37, 'which':37});
+  document.dispatchEvent (evt);
+});
+
+document.getElementById("down2048").addEventListener("click", function(){
+  var evt = new KeyboardEvent('keydown', {'keyCode':40, 'which':40});
+  document.dispatchEvent (evt);
+});
+
+document.getElementById("right2048").addEventListener("click", function(){
+  var evt = new KeyboardEvent('keydown', {'keyCode':39, 'which':39});
+  document.dispatchEvent (evt);
+});
+
+
+
+
+

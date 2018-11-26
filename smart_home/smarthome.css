@@ -1,0 +1,230 @@
+html, body {
+	margin: 0; 
+	height: 100%; 
+	width: 100%;
+	overflow: hidden;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.big_div {
+	margin: 0; 
+	height: 100%; 
+	width: 100%;
+	overflow: hidden;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: black;
+}
+
+.top {
+	display:flex;
+	position: relative;
+	left: 10px;
+	width: 100%;
+	height: 45%;
+}
+
+.bottom {
+	display:flex;
+	position: relative;
+	top: -10px;
+	left: 10px;
+	height:50%;
+	width: 100%;
+}
+
+.bathroom {
+	width:30%;
+	text-align: center;
+}
+
+
+.bedroom {
+	width:40%;
+	left: -20px;
+}
+
+.entrance {
+	width: 30%;
+	left: -10px;
+	border-bottom-width: 0px !important;
+}
+
+
+.kitchen {
+	width: 30%;
+}
+
+.living_room {
+	width: 70%;
+	left: -20px;
+	border-left-width: 0px !important;
+	border-top-width: 0px !important;
+}
+
+.room {
+	position: relative;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	border-style: solid;
+	border-width: 10px;
+	border-color: white;
+}
+
+
+
+.door_square {
+	position: absolute;
+	background-color: black;
+	z-index: 1;
+}
+
+.vertical_door_square {
+	width: 100px;
+	height: 100px;
+	right: -55px;
+}
+
+.horizontal_door_square {
+	width: 100px;
+	height: 100px;
+}
+
+.door {
+	position: absolute;
+	background-color: orange;
+	transform: rotate(120deg);
+}
+
+.vertical_door {
+	height: 100px;
+	width: 10px;
+	bottom: -19px;
+}
+
+
+.horizontal_door {
+	height: 10px;
+	width: 100px;
+	left: -69px;
+	bottom:2px;
+}
+
+.entrance_door_square {
+	top: -55px;
+}
+
+
+.bedroom_door_square {
+	bottom: -55px;
+}
+
+
+.room_name {
+	user-select: none;
+	font-family: "Ubuntu";
+	font-size: 300%;
+	color: white;
+}
+
+.settings {
+	width: 80%;
+	height: 80%;
+	position: absolute;
+	border: 10px white solid;
+	border-radius: 10px;
+	display: none;
+	align-items: center;
+	background-color: black;
+	z-index: 2;
+}
+
+.settings_room {
+	font-size: 400%;
+	font-family: "Ubuntu";
+	user-select: none;
+	color:white;
+	text-align: center;
+	align-self: center;
+}
+
+
+.icon {
+	font-size: 600%; 
+	color:white;
+}
+
+
+.tile {
+	text-align: center; 
+}
+
+.row_margin {
+	margin-bottom: 3%;
+}
+
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 30%;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 80%;
+  width: 25%;
+  left: 5%;
+  bottom: 10%;
+  background-color: white;
+  transition: .1s;
+}
+
+input:checked + .slider {
+  background-color: yellow;
+  /*#2196F3;*/
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px yellow;
+  /*#2196F3;*/
+}
+
+input:checked + .slider:before {
+  transform: translateX(265%);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
