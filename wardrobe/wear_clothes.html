@@ -13,14 +13,61 @@
     <!-- Custom styles for this template -->
     <link href="style.css" rel="stylesheet">
 
-    <link href="4/thumbnail-slider.css" rel="stylesheet" type="text/css" />
     <link href="4/ninja-slider.css" rel="stylesheet" type="text/css" />
     <script src="4/ninja-slider.js" type="text/javascript"></script>
 
     <style>
-    canvas#viewport { border: 1px solid white; margin-left: 200px;}
+    canvas#viewport { border: 1px solid white; margin: auto;}
 
     <style>
+        .main-window {
+          padding: 20px;
+          margin: auto;
+        }
+
+        body {
+          background-color: black;
+          color: white;
+        }
+
+        .wdb-nav-card {
+          margin-bottom: 15px;
+          margin-top: 15px;
+          /*background-color: gray;*/
+          text-align: center;
+          border-style: solid;
+        }
+
+
+        .wdb-nav-card:hover {
+          background-color: gray;
+        }
+
+        .main-card-wdb {
+          background-color: black;
+        }
+
+
+
+        .wdb-model-card {
+          margin-bottom: 15px;
+          margin-top: 15px;
+          /*background-color: gray;*/
+          text-align: center;
+          /*border-style: solid;*/
+        }
+
+
+
+        .center_aligned {
+          text-align: center;
+        }
+
+
+
+        .weatherwidget-io {
+          pointer-events: none;
+        }
         body {font: normal 0.9em Arial;margin:0;}
         a {color:#1155CC;}
         ul li {padding: 10px 0;}
@@ -51,7 +98,7 @@
           display: none;
         }
         #ninja-slider-shirt{
-          display: block;
+          display: none;
         }
         #ninja-slider-shoe{
           display: none;
@@ -62,14 +109,35 @@
         #ninja-slider-coat{
           display: none;
         }
-        /*#shirt_wardrobe {
-          display: none;
-        }*/
+
+        .select_btn {
+          float: right;
+        }
+
+
+        .wardrobe_change_card:hover {
+          background-color: #202020;
+          cursor: pointer;
+        }
+
+
+        .select_btn {
+          height: 70px;
+          font-size: 23px
+        }
+
+
+        .select_w_text {
+          font-size: 30px;
+        }
+
+
     </style>
 
   </head>
 
   <body>
+
 
     <div class="container main-window">
       <br>
@@ -78,38 +146,62 @@
       <!-- page_title -->
 
       <div class="row">
-        <div class="col-md-12 col-sm-12" style="text-align: center"><h1>My Wardrobe</h1></div>
+        <div class="col-md-12 col-sm-12">
 
+          <div style="text-align: center; font-size: 40px; color: white" >
+            <span style="float:left;">
+              <a href="javascript:history.back()" id="back_button">
+              <i class="fa fa-chevron-left"></i> Home
+              </a>
+            </span> 
+            My Wardrobe : <span id="wtitle">shirts</span>
+          </div>
+
+        </div>
       </div>
       <!-- wardrobe slider -->
       <div class="row">
-        <div class="col-md-12 col-sm-12" style="text-align: center"><h1>Shirts</h1></div>
+        <div class="col-md-12 col-sm-12" style="text-align: center"></div>
         
         <!-- shirts slider -->
-          <div id='ninja-slider'>
+          <div id='ninja-slider-shirt'>
             <div>
               <div class="slider-inner">
                 <ul>
-                  <li><a class="ns-img" href="img/1.png"></a></li>
-                  <li><a class="ns-img" href="img/2.png"></a></li>
-                  <li><a class="ns-img" href="img/3.png"></a></li>
-                  <li><a class="ns-img" href="img/4.png"></a></li>
-                  <li><a class="ns-img" href="img/5.png"></a></li>
+                  <li>
+                    <a class="ns-img" onclick="change_clothing(2, 1)" href="../images/wardrobe/new_clothes/shirt1.png"></a>
+                    <button id="_2_1_png" class="btn btn-primary select_btn">SELECT ITEM</button>
+                  </li>
+                  <li>
+                    <a class="ns-img" onclick="change_clothing(2, 2)" href="../images/wardrobe/new_clothes/shirt2.png"></a>
+                    <button id="_2_2_png" class="btn btn-primary select_btn">SELECT ITEM</button>
+                  </li>
+                  <li>
+                    <a class="ns-img" onclick="change_clothing(2, 3)" href="../images/wardrobe/new_clothes/shirt3.png"></a>
+                    <button id="_2_3_png" class="btn btn-primary select_btn">SELECT ITEM</button>
+                  </li>
                 </ul>
               </div>
             </div>
           </div>  
 
-        <!-- shirts slider -->
+        <!-- coats slider -->
           <div id='ninja-slider-coat'>
             <div>
               <div class="slider-inner">
                 <ul>
-                  <li><a class="ns-img" href="img/1.png"></a></li>
-                  <li><a class="ns-img" href="img/2.png"></a></li>
-                  <li><a class="ns-img" href="img/3.png"></a></li>
-                  <li><a class="ns-img" href="img/4.png"></a></li>
-                  <li><a class="ns-img" href="img/5.png"></a></li>
+                  <li>
+                    <a class="ns-img" onclick="change_clothing(3, 1)" href="../images/wardrobe/new_clothes/coat1.png"></a>
+                    <button id="_3_1_png" class="btn btn-primary select_btn">SELECT ITEM</button>
+                  </li>
+                  <li>
+                    <a class="ns-img" onclick="change_clothing(3, 2)" href="../images/wardrobe/new_clothes/coat2.png"></a>
+                    <button id="_3_2_png" class="btn btn-primary select_btn">SELECT ITEM</button>
+                  </li>
+                  <li>
+                    <a class="ns-img" onclick="change_clothing(3, 3)" href="../images/wardrobe/new_clothes/coat3.png"></a>
+                    <button id="_3_3_png" class="btn btn-primary select_btn">SELECT ITEM</button>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -117,16 +209,23 @@
 
 
 
-        <!-- shirts slider -->
+        <!-- acc slider -->
           <div id='ninja-slider-acc'>
             <div>
               <div class="slider-inner">
                 <ul>
-                  <li><a class="ns-img" href="img/1.png"></a></li>
-                  <li><a class="ns-img" href="img/2.png"></a></li>
-                  <li><a class="ns-img" href="img/3.png"></a></li>
-                  <li><a class="ns-img" href="img/4.png"></a></li>
-                  <li><a class="ns-img" href="img/5.png"></a></li>
+                  <li>
+                    <a class="ns-img" onclick="change_clothing(4, 1)" href="../images/wardrobe/new_clothes/acc1.png"></a>
+                    <button id="_4_1_png" class="btn btn-primary select_btn">SELECT ITEM</button>
+                  </li>
+                  <li>
+                    <a class="ns-img" onclick="change_clothing(4, 2)" href="../images/wardrobe/new_clothes/acc2.png"></a>
+                    <button id="_4_2_png" class="btn btn-primary select_btn">SELECT ITEM</button>
+                  </li>
+                  <li>
+                    <a class="ns-img" onclick="change_clothing(4, 3)" href="../images/wardrobe/new_clothes/acc3.png"></a>
+                    <button id="_4_3_png" class="btn btn-primary select_btn">SELECT ITEM</button>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -134,16 +233,23 @@
 
 
 
-        <!-- shirts slider -->
+        <!-- shoe slider -->
           <div id='ninja-slider-shoe'>
             <div>
               <div class="slider-inner">
                 <ul>
-                  <li><a class="ns-img" href="img/1.png"></a></li>
-                  <li><a class="ns-img" href="img/2.png"></a></li>
-                  <li><a class="ns-img" href="img/3.png"></a></li>
-                  <li><a class="ns-img" href="img/4.png"></a></li>
-                  <li><a class="ns-img" href="img/5.png"></a></li>
+                  <li>
+                    <a class="ns-img" onclick="change_clothing(1, 1)" href="../images/wardrobe/new_clothes/shoe1.png"></a>
+                    <button id="_1_1_png" class="btn btn-primary select_btn">SELECT ITEM</button>
+                  </li>
+                  <li>
+                    <a class="ns-img" onclick="change_clothing(1, 2)" href="../images/wardrobe/new_clothes/shoe2.png"></a>
+                    <button id="_1_2_png" class="btn btn-primary select_btn">SELECT ITEM</button>
+                  </li>
+                  <li>
+                    <a class="ns-img" onclick="change_clothing(1, 3)" href="../images/wardrobe/new_clothes/shoe3.png"></a>
+                    <button id="_1_3_png" class="btn btn-primary select_btn">SELECT ITEM</button>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -151,17 +257,29 @@
 
 
 
-        <!-- shirts slider -->
+        <!-- pants slider -->
           <div id='ninja-slider-pants'>
             <div>
               <div class="slider-inner">
                 <ul>
-                  <li><a class="ns-img" href="img/1.png"></a></li>
-                  <li><a class="ns-img" href="img/2.png"></a></li>
-                  <li><a class="ns-img" href="img/3.png"></a></li>
-                  <li><a class="ns-img" href="img/4.png"></a></li>
-                  <li><a class="ns-img" href="img/5.png"></a></li>
+                  <li>
+                    <a class="ns-img" onclick="change_clothing(0, 1)" href="../images/wardrobe/new_clothes/pants1.png"></a>
+                    <button id="_0_1_png" class="btn btn-primary select_btn">SELECT ITEM</button>
+                  </li>
+                  <li>
+                    <a class="ns-img" onclick="change_clothing(0, 2)" href="../images/wardrobe/new_clothes/pants2.png"></a>
+                    <button id="_0_2_png" class="btn btn-primary select_btn">SELECT ITEM</button>
+                  </li>
+                  <li>
+                    <a class="ns-img" onclick="change_clothing(0, 3)" href="../images/wardrobe/new_clothes/pants3.png"></a>
+                    <button id="_0_3_png" class="btn btn-primary select_btn">SELECT ITEM</button>
+                  </li>
+                  <li>
+                    <a class="ns-img" onclick="change_clothing(0, 4)" href="../images/wardrobe/new_clothes/pants4.png"></a>
+                    <button id="_0_4_png" class="btn btn-primary select_btn">SELECT ITEM</button>
+                  </li>
                 </ul>
+                <!-- <div class="fs-icon" title="Expand/Close"></div> -->
               </div>
             </div>
           </div> 
@@ -174,22 +292,71 @@
       <!-- start other clothes and model row -->
       <div class="row">
         
-        <div class="col-md-6 col-sm-6" style="text-align: center">
-          <h1>Other Clothing Items</h1>
+        <div class="col-md-5 col-sm-5" style="text-align: center">
+          <h2>Other Clothing Items</h2>
 
           <br><br>
-          <button onclick="change_to(2)">SWITCH TO SHIRTS</button><br><br>
-          <button onclick="change_to(3)">SWITCH TO COATS</button><br><br>
-          <button onclick="change_to(1)">SWITCH TO SHOES</button><br><br>
-          <button onclick="change_to(0)">SWITCH TO PANTS</button><br><br>
-          <button onclick="change_to(4)">SWITCH TO ACCESSORIES</button>
+          <div class="row wardrobe_change_card" style="border: 2px solid;" onclick="change_to(4)">
+            <div class="col-md-4 col-sm-4" style="text-align: center">
+              <div class="icon-pic">
+                <img src="../images/wardrobe/hat_white.png" width="100%">
+              </div>
+            </div>
+            <div class="col-md-8 col-sm-8" style="text-align: left"><br><br><a class="select_w_text">SELECT HATS</a></div>  
+          </div>
+          <br>
 
+          <div class="row wardrobe_change_card" style="border: 2px solid;" onclick="change_to(2)">
+            <div class="col-md-4 col-sm-4" style="text-align: center">
+              <div class="icon-pic">
+                <img src="../images/wardrobe/shirt_white.png" width="100%">
+              </div>
+            </div>
+            <div class="col-md-8 col-sm-8" style="text-align: left"><br><br><a class="select_w_text">SELECT SHIRTS</a></div>  
+          </div>
+          <br>
+
+
+          <div class="row wardrobe_change_card" style="border: 2px solid;" onclick="change_to(3)">
+            <div class="col-md-4 col-sm-4" style="text-align: center">
+              <div class="icon-pic">
+                <img src="../images/wardrobe/coat_white.png" width="100%">
+              </div>
+            </div>
+            <div class="col-md-8 col-sm-8" style="text-align: left"><br><br><a class="select_w_text">SELECT COATS</a></div>  
+          </div>
+          <br>
+
+
+          <div class="row wardrobe_change_card" style="border: 2px solid;" onclick="change_to(0)">
+            <div class="col-md-4 col-sm-4" style="text-align: center">
+              <div class="icon-pic">
+                <img src="../images/wardrobe/pants_white.png" width="100%">
+              </div>
+            </div>
+            <div class="col-md-8 col-sm-8" style="text-align: left"><br><br><a class="select_w_text">SELECT PANTS</a></div>  
+          </div>
+          <br>
+
+
+          <div class="row wardrobe_change_card" style="border: 2px solid;" onclick="change_to(1)">
+            <div class="col-md-4 col-sm-4" style="text-align: center">
+              <div class="icon-pic">
+                <img src="../images/wardrobe/shoe_white.png" width="100%">
+              </div>
+            </div>
+            <div class="col-md-8 col-sm-8" style="text-align: left"><br><br><a class="select_w_text">SELECT SHOES</a></div>  
+          </div>
 
         </div>
 
 
 
-        <div class="col-md-6 col-sm-6" style="text-align: center"><h1>Model</h1></div>
+        <div class="col-md-7 col-sm-7" style="text-align: center">
+          <h2>Today's look</h2>
+          <canvas id="viewport"></canvas>
+
+        </div>
       </div> <!-- end other clothes and model row -->
 
 
@@ -197,11 +364,173 @@
       <br><br>
       
     </div>
+    <!-- Bootstrap core JavaScript -->
+    <script src="../libs/jquery/jquery.min.js"></script>
+    <script src='https://www.planyo.com/libs/planyonet-fc.js'></script>
+    <script src='https://www.planyo.com/embed-schedule.js'></script>
+    <script src="../libs/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 
     <script>
 
-      var slider_ids = ["ninja-slider-pants", "ninja-slider-shoe", "ninja-slider-shirt",           "ninja-slider-coat", "ninja-slider-acc"]
+      var canvas = document.getElementById('viewport'),
+      context = canvas.getContext('2d');
+      canvas.width = 400;
+      canvas.height = 800;
+   
+
+      /*
+      pants : 0
+      shoe : 1
+      shirt : 2
+      coat : 3
+      acc : 4
+      */
+
+
+      function wear_pants() {
+        if (myclothes && myclothes[0]){
+          pants = new Image(175, 350);
+          pants.src = "../images/wardrobe/new_clothes/pants" + myclothes[0] + ".png";
+          pants.onload = function(){
+            context.drawImage(this, 113, 375, 175, 350);
+            wear_shirt();
+          }  
+        } else {
+          wear_shirt();
+        }
+      }
+
+      function wear_shirt() {
+        if (myclothes && myclothes[2]){
+          shirt = new Image(275, 275);
+          shirt.src = '../images/wardrobe/new_clothes/shirt'+ myclothes[2] +'.png';
+          shirt.onload = function(){
+            this.zIndex = 1000;
+            context.drawImage(this, 62, 125, 275, 275);
+            wear_coat();
+          }
+        } else {
+          wear_coat();
+        }
+      }
+
+      function wear_coat() {
+        if (myclothes && myclothes[3]){
+          coat = new Image(325, 325);
+          coat.src = '../images/wardrobe/new_clothes/coat' + myclothes[3] + '.png';
+          coat.onload = function(){
+            context.drawImage(this, 37, 100, 325, 325);
+            wear_head();   
+          }
+        } else {
+          wear_head();
+        }
+        
+      }
+
+      function wear_head() {
+        head = new Image(100, 100);
+        head.src = '../images/wardrobe/new_clothes/head.png';
+        head.onload = function(){
+          context.drawImage(this, 137, 13, 125, 125);
+          wear_cap();
+        }
+      }
+
+      function wear_cap() {
+        if (myclothes && myclothes[4]){
+          cap_hat = new Image(125, 75);
+          cap_hat.src = '../images/wardrobe/new_clothes/acc' + myclothes[4] +'.png';
+          cap_hat.onload = function(){
+            context.drawImage(this, 135, -12, 125, 75);
+          }  
+        }
+      }
+
+      function wear_shoes() {
+        if (myclothes && myclothes[1]){
+          shoe = new Image(175, 100);
+          shoe.src = '../images/wardrobe/new_clothes/shoe' + myclothes[1] +'.png';
+          shoe.onload = function(){
+            context.drawImage(this, 117, 700, 175, 100);
+            wear_pants();
+          }
+        } else {
+          wear_pants();
+        }
+      }      
+
+
+      function wear_all_clothes() {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        wear_shoes();
+      }
+
+
+      var slider_ids = ["ninja-slider-pants", "ninja-slider-shoe", "ninja-slider-shirt",               "ninja-slider-coat", "ninja-slider-acc"]
+      var slider_names = ["PANTS", "SHOES", "SHIRTS", "COATS", "HATS"]
+
+      /*
+      pants : 0
+      shoe : 1
+      shirt : 2
+      coat : 3
+      acc : 4
+      */
+
+      var myclothes = [0, 0, 0, 0, 0];
+
+
+      function unselect(btn_id) {
+        $(btn_id).removeClass("btn-primary").addClass("btn-secondary")
+        $(btn_id).text("SELECTED")
+      }
+
+
+      function change_clothing(cloth_type, idx) {
+        
+        var btn_id = "#_" + cloth_type + "_" + idx + "_png";
+
+
+
+        for(var i = 1; i < 5; i++) {
+          var btn_id_ = "#_" + cloth_type + "_" + i + "_png";
+          if ($(btn_id_)) {
+            $(btn_id_).removeClass("btn-secondary").addClass("btn-primary");
+            $(btn_id_).text("SELECT ITEM")
+          }
+        }
+
+        if (myclothes[cloth_type] == idx) {
+          myclothes[cloth_type] = 0;
+          sessionStorage.setItem("myclothesdict", myclothes);
+          wear_all_clothes();
+
+        } else {
+
+          $(btn_id).removeClass("btn-primary").addClass("btn-secondary")
+          $(btn_id).text("SELECTED")
+        
+          myclothes[cloth_type] = idx;
+          console.log(myclothes);
+          sessionStorage.setItem("myclothesdict", myclothes);
+          wear_all_clothes();  
+        }
+
+        
+      }
+
+
+      function set_selected_items() {
+        for (var i = 0; i < 5; i++) {
+          var btn_id = "#_" + i + "_" + myclothes[i] + "_png";
+          if ($(btn_id)) {
+            $(btn_id).removeClass("btn-primary").addClass("btn-secondary");
+            $(btn_id).text("SELECTED");
+          }
+        }
+      }
 
       function reload_js() {
         var head = document.getElementsByTagName('head')[0];
@@ -219,32 +548,68 @@
        
 
       function change_to(id_idx) {
-        for (var i = 0; i < 5; i++) {
-          if (document.getElementById(slider_ids[i])) {
-            document.getElementById(slider_ids[i]).style.display = "none";
-          }
-        }
+        // for (var i = 0; i < 5; i++) {
+        //   if (document.getElementById(slider_ids[i])) {
+        //     document.getElementById(slider_ids[i]).style.display = "none";
+        //   }
+        // }
 
-        for (var i = 0; i < 5; i++) {
-          var element =  document.getElementById(slider_ids[i]);
-          if (typeof(element) == 'undefined' || element == null)
-          {
-            console.log("active", slider_ids[i]);
-            document.getElementById('ninja-slider').id = slider_ids[i];
-            document.getElementById(slider_ids[i]).style.display = "none";
-          }
-        }
+        // for (var i = 0; i < 5; i++) {
+        //   var element =  document.getElementById(slider_ids[i]);
+        //   if (typeof(element) == 'undefined' || element == null)
+        //   {
+        //     console.log("active", slider_ids[i]);
+        //     document.getElementById('ninja-slider').id = slider_ids[i];
+        //     document.getElementById(slider_ids[i]).style.display = "none";
+        //   }
+        // }
 
-        document.getElementById(slider_ids[id_idx]).style.display = "block";
-        document.getElementById(slider_ids[id_idx]).id = 'ninja-slider';
-        reload_js();
+        // document.getElementById(slider_ids[id_idx]).style.display = "block";
+        // document.getElementById(slider_ids[id_idx]).id = 'ninja-slider';
+        // // reload_js();
+
+        sessionStorage.setItem("reload_to", id_idx);
+        sessionStorage.setItem("myclothesdict", myclothes);
+        document.location.reload();
       }
 
+      window.onload = function() {
+          var reload_idx = sessionStorage.getItem("reload_to");
+          if (reload_idx) {
+            document.getElementById(slider_ids[reload_idx]).id = 'ninja-slider';
+            reload_js();
+            $("#wtitle").text(slider_names[reload_idx]);
+          } else {
+            document.getElementById(slider_ids[2]).id = 'ninja-slider';
+            reload_js();
+          }
+
+          var clothes_old = sessionStorage.getItem("myclothesdict");
+          console.log("old", clothes_old);
+          if (clothes_old) {
+            clothes_old = clothes_old.split(",");
+            myclothes[0] = parseInt(clothes_old[0]);
+            myclothes[1] = parseInt(clothes_old[1]);
+            myclothes[2] = parseInt(clothes_old[2]);
+            myclothes[3] = parseInt(clothes_old[3]);
+            myclothes[4] = parseInt(clothes_old[4]);
+          }
+
+          set_selected_items();
+          wear_all_clothes();
+      }
       
 
 
 
+
+
+
+
     </script>
+
+
+
 
   </body>
 
