@@ -101,16 +101,6 @@
       //CALENDAR
 
 
-
-      //2048 controllers
-      $("#up2048").click(function() {
-
-        alpha("the heck");
-        GameManager.prototype.move(0);
-        //GameManager.prototype.move(0);
-      });
-
-
       $('#minesweeper_page').css('display', 'none');
       $('#minesweeper_page').css('opacity', '0.0');
 
