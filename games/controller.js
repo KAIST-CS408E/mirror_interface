@@ -100,12 +100,15 @@
       //CALENDAR
       //CALENDAR
 
+      $('#minesweeper_page').css('display', 'none');
       $('#minesweeper_page').css('opacity', '0.0');
 
       $('#checkers_page').css('display', 'none');
+      $('#checkers_page').css('opacity', '1.0');
+
       $('#2048_page').css('display', 'block');
       $('#2048_page_button').addClass('active_state');
-      $('#checkers_page').css('opacity', '1.0');
+      
 
     
 
