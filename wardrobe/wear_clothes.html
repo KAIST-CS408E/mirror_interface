@@ -145,17 +145,31 @@
       
       <!-- page_title -->
 
-      <div class="row">
-        <div class="col-md-12 col-sm-12">
+      <div class="row md-4">
 
-          <div style="text-align: center; font-size: 40px; color: white" >
-            <span style="float:left;">
-              <a href="javascript:history.back()" id="back_button">
-              <i class="fa fa-chevron-left"></i> Home
-              </a>
-            </span> 
-            My Wardrobe : <span id="wtitle">shirts</span>
-          </div>
+          <div class="col-lg-3 col-md-3 col-sm-3">
+            <a href="javascript:history.back()" id="back_button" class="mybtn btn btn-block" style="color:white;font-size: 30px; text-align: left;">
+              <i style="padding-top: 30px;" class="fa fa-chevron-left"></i> Home
+            </a>
+        </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-6" style="font-size: 30px; padding-top: 50px; text-align: center;">
+              My Wardrobe : <span id="wtitle">shirts</span>
+            </div> 
+
+
+            <div class="col-lg-3 col-md-3 col-sm-3">
+              <div class="datetime"  align="center">
+                <div >
+                  <h1 id="display_time"></h1>
+                </div>
+                <div >
+                  <h4 id="display_date"></h3>
+                </div>
+              </div>
+            </div> 
+
+
 
         </div>
       </div>
@@ -369,7 +383,6 @@
     <script src='https://www.planyo.com/libs/planyonet-fc.js'></script>
     <script src='https://www.planyo.com/embed-schedule.js'></script>
     <script src="../libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-
 
     <script>
 
@@ -597,6 +610,64 @@
 
           set_selected_items();
           wear_all_clothes();
+
+
+
+          // THE TITLE AND TIME
+      var idx_to_month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+      var idx_to_day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+
+      function loadTimeDate() {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        
+        m = checkTime(m);
+        hour = get_ampm_hour(h);
+        day_part = "AM";
+        if (h >= 12) {
+          day_part = "PM";
+        }
+        var hello_message = get_hello_message(h);
+
+        document.getElementById('display_time').innerHTML = hour + ":" + m + "   " + day_part;
+        var d = today.getDate();
+        var day = idx_to_day[today.getDay()];
+        var month = idx_to_month[today.getMonth()];
+        document.getElementById('display_date').innerHTML = day + ", " + month + " " + d  ;
+        document.getElementById('hello_message').innerHTML = hello_message;
+        var t = setTimeout(loadTimeDate, 500);
+      }
+
+      function get_ampm_hour(h) {
+        if (h == 0 || h == 12) {
+          return 12
+        }
+        return h%12
+      }
+
+      function get_hello_message(h) {
+        if (h <= 4 && h >= 22) {
+          return "Good Night!"
+        }
+        
+        if (h > 4 && h <= 11) {
+          return "Good Morning!"
+        }
+        
+        if (h > 11 && h < 16) {
+          return "Good Afternoon!"
+        }
+        return "Good Evening!"
+      }
+
+      function checkTime(i) {
+        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+        return i;
+      } 
+
+
+      loadTimeDate();
       }
       
 
