@@ -28,7 +28,7 @@
     right:0px;
     width:45px;
     height:45px;
-    background: rgba(0,0,0,0.9) url(fullscreen.png) no-repeat 0 0;
+    background: rgba(0,0,0,0.1) url(fullscreen.png) no-repeat 0 0;
     z-index:2;
     opacity:0;
     -webkit-transition:opacity 0.8s;
@@ -66,7 +66,7 @@
 }
 
 #ninja-slider li {
-    background-color:"yellow" !important;
+    background-color:#111;
     width:100%;
     height:100%;
     top:0;
@@ -112,9 +112,9 @@
 {
     position: absolute;
     display:inline-block;
-    width:140px;
-    height:140px;
-    line-height:100px;
+    width:42px;
+    height:56px;
+    line-height:56px;
     top: 50%;
     margin-top:-28px;
     background-color:rgba(0,0,0,0.4);
@@ -124,7 +124,7 @@
     overflow:hidden;
     white-space:nowrap;
     -webkit-user-select: none;
-    user-select:none;   
+    user-select:none;
     border-radius:2px;
     z-index:10;
     opacity:0.3; 
@@ -153,11 +153,10 @@
     top: 17px;
     content: "";
     display: inline-block;
-    width: 80px;
-    height: 80px;
-    margin-top: 10px;
-    border-left: 4px solid white;
-    border-top: 4px solid white;
+    width: 20px;
+    height: 20px;
+    border-left: 2px solid white;
+    border-top: 2px solid white;
 }
 
 #ninja-slider-prev::before {
