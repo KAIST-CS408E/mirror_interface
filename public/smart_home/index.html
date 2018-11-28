@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="../libs/jquery/jquery.min.js"></script>
 
+  <link href="../css/style.css" rel="stylesheet"> 
+
 </head>
 <body>
 
@@ -19,7 +21,28 @@
 <script src="controller.js"></script>
 
 
+<div class="row md-4">
+	<div class="col-lg-4 col-md-4 col-sm-4" style="margin-left: -50px;">
+        <a href="javascript:history.back()" id="back_button" class="mybtn btn btn-block">
+        <i style=" font-size: 30px; padding-top: 20px;" class="fa fa-chevron-left"></i> Home
+        </a>
+    </div>
 
+    <div class="col-lg-4 col-md-4 col-sm-4" style="margin-left: 25px;">
+        <h1 id="hello_message" style="font-size: 30px;margin-top: 40px; padding-bottom: 100px;"></h1>
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-4" style="margin-left: 25px;">
+        <div class="datetime"  align="center">
+            <div >
+              <h1 id="display_time"></h1>
+            </div>
+            <div >
+                <h4 id="display_date"></h3>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
@@ -135,7 +158,7 @@
 		</div>
 
 		<div class="col-md-2 tile">
-			<i id="bulb" class="fa fa-lightbulb-o icon" style="font-size:1500%;"></i>
+			<i id="bulb" class="fa fa-lightbulb-o icon" style="font-size:1500%; padding-top: 200%;"></i>
 		</div>
 
 		<div class="col-md-2 tile" onclick="minus_brightness()">
@@ -149,7 +172,7 @@
 
 			<label style="align-self: center;" class="switch">
 			  <input type="checkbox" id='bulb_checkbox' onclick="update_light(true)">
-			  <span id="slider" class="slider round"></span>
+			  <span id="slider" class="slider round" style="margin-top: 100%;"></span>
 			</label>
 
 		</div>
