@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>My House</title>
+  <!-- Bootstrap core CSS -->
+  <link href="../libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="../libs/jquery/jquery.min.js"></script>
+
+</head>
+<body>
+
+
+<link href='smarthome.css' rel='stylesheet'/>
+<script src="controller.js"></script>
+
+
+
+
+	
+<div id="big_div" class= "big_div">
+	<div class="top">
+		<div class="room bathroom" onclick="ShowSettings('0')">
+			<text class="room_name"> Bathroom </text>
+
+			<div class="door_square vertical_door_square" 
+			onclick="open_close_vertical_door('bathroom_door')">
+				
+				<div id="bathroom_door" class="door vertical_door">
+				</div>
+			
+			</div>
+		</div>
+
+
+		<div class="room entrance">
+			<div class="door_square horizontal_door_square entrance_door_square" 
+			onclick="open_close_horizontal_door('entrance_door')">
+				
+				<div id="entrance_door" class="door horizontal_door"  >
+				</div>
+			
+			</div>
+		</div>
+
+
+
+		<div class="bedroom room" onclick="ShowSettings('3')">
+			
+			<text class="room_name"> Bedroom </text>
+
+			<div class="door_square horizontal_door_square bedroom_door_square" onclick=" open_close_horizontal_door('bedroom_door')">
+				<div id="bedroom_door" class="door horizontal_door" >
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+	<div class="bottom">
+		<div class="kitchen room" onclick="ShowSettings('1')">
+			<text class="room_name"> Kitchen </text>
+
+			<div class="door_square vertical_door_square" 
+			onclick="open_close_vertical_door('kitchen_door')">
+				
+				<div id="kitchen_door" class="door vertical_door">
+				</div>
+			
+			</div>
+		</div>
+
+
+		<div class="living_room room" onclick="ShowSettings('2')">
+			<text class="room_name"> Living Room </text>
+		</div>
+	</div>
+</div>
+
+
+<div id="settings" class="container settings">
+	<div class="row row_margin">
+		<div class="col-md-2"">
+		</div>
+
+		<div class="col-md-8" style="text-align: center;">
+			<text id="settings_room" class="settings_room" > Bathroom </text>
+		</div>
+
+
+		<div class="col-md-2" onclick="CloseSettings()">
+			<i style="float:right;" class="fa fa-times-circle icon"></i>
+		</div>
+
+	</div>
+
+	<div class="row row_margin">	
+		<div class="col-md-1">
+		</div>
+
+		<div class="col-md-2 tile">
+			<i id="thermometer" class="fa fa-thermometer-half icon"></i>
+		</div>
+
+
+		<div class="col-md-2 tile" onclick="minus_temp()">
+			<i class="fa fa-minus-circle icon"></i>
+		</div>
+
+
+		<div class="col-md-3 tile">
+			<text id="temp_measurement" class="settings_room">23°C</text>
+		</div>
+
+
+		<div class="col-md-2 tile" onclick="plus_temp()">
+			<i class="fa fa-plus-circle icon"></i>
+		</div>
+
+		<div class="col-md-2">
+		</div>
+	</div>
+
+
+
+	<div class="row row_margin">	
+		<div class="col-md-1">
+		</div>
+
+		<div class="col-md-2 tile">
+			<i id="bulb" class="fa fa-lightbulb-o icon" style="font-size:1500%;"></i>
+		</div>
+
+		<div class="col-md-2 tile" onclick="minus_brightness()">
+			<i class="fa fa-minus-circle icon"></i> 
+		</div>
+
+
+		<div class="col-md-3 tile">
+			<text id="brightness_measurement" class="settings_room">100%</text> <br>
+			<br>
+
+			<label style="align-self: center;" class="switch">
+			  <input type="checkbox" id='bulb_checkbox' onclick="update_light(true)">
+			  <span id="slider" class="slider round"></span>
+			</label>
+
+		</div>
+
+		<div class="col-md-2 tile" onclick="plus_brightness()">
+			<i class="fa fa-plus-circle icon"></i>
+		</div>
+
+		<div class="col-md-2">
+		</div>
+	</div>
+
+
+
+
+
+
+</div>
+	
+	
+</div>
+
+
+
+	
+
+</body>
+</html>
