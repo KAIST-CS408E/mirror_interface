@@ -24,7 +24,10 @@
         var day = idx_to_day[today.getDay()];
         var month = idx_to_month[today.getMonth()];
         document.getElementById('display_date').innerHTML = day + ", " + month + " " + d  ;
-        document.getElementById('hello_message').innerHTML = hello_message;
+        var elements = document.getElementsByClassName('hello_message');
+        elements[0].innerHTML = hello_message;
+        elements[1].innerHTML = hello_message;
+        elements[2].innerHTML = hello_message;
         var t = setTimeout(loadTimeDate, 500);
       }
 
