@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>2048 game</title>
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   
   
       <link rel="stylesheet" href="css/style.css">
@@ -19,7 +19,7 @@
     <h1 class="title">2048</h1>
     <div class="score-container">0</div>
   </div>
-  <p class="game-intro">Join the numbers and get to the <strong>2048 tile!</strong></p>
+  <!-- <p class="game-intro">Join the numbers and get to the <strong>2048 tile!</strong></p> -->
 
   <div class="game-container">
     <div class="game-message">
@@ -61,14 +61,29 @@
     </div>
   </div>
 
-  <p class="game-explanation">
+
+  <div class="grid-row">
+      <div class="col-md-4 mb-4"></div>
+      <div class="col-md-4 mb-4"></div>
+      <div class="col-md-4 mb-4" style="color:#eee4da; padding-top: 50px;">
+
+        <span id='up2048' style="cursor: pointer;"><i class="fa fa-chevron-circle-up" style="font-size: 70px; padding-left: 44%;"></i><br></span>
+
+        <span id='left2048' style="cursor: pointer;"><i class="fa fa-chevron-circle-left" style="font-size: 70px; padding-left: 29%;"></i></span>
+
+        <span id='down2048' style="cursor: pointer;"><i class="fa fa-chevron-circle-down" style="font-size: 70px; padding-left: 10px;padding-right: 10px;"></i></span>
+
+        <span id='right2048' style="cursor: pointer;"><i class="fa fa-chevron-circle-right" style="font-size: 70px;"></i></span>
+
+      </div>
+    </div>
+
+  <!-- <p class="game-explanation">
     <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same number touch, they <strong>merge into one!</strong>
-  </p>
+  </p> -->
 
 </div>
   <script src='http://cdnjs.cloudflare.com/ajax/libs/hammer.js/1.0.6/hammer.min.js'></script>
-
-  
 
     <script  src="js/controller.js"></script>
 
