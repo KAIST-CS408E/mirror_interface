@@ -333,7 +333,7 @@ a[data-goto]:hover{
 }
 .fc-scroller>.fc-day-grid,.fc-scroller>.fc-time-grid{
     position:relative;
-    width:100%
+    width:100%;
 }
 .fc-event{
     position:relative;
@@ -559,7 +559,7 @@ a.fc-more:hover{
     padding-bottom:1em
 }
 .fc-basic-view .fc-body .fc-row{
-    min-height:3em
+    min-height:7em
 }
 .fc-row.fc-rigid .fc-content-skeleton{
     position:absolute;

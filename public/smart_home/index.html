@@ -20,6 +20,7 @@
 <link href='smarthome.css' rel='stylesheet'/>
 <script src="controller.js"></script>
 
+<div class="container">
 
 <div class="row md-4">
 	<div class="col-lg-4 col-md-4 col-sm-4" style="margin-left: -50px;">
@@ -43,6 +44,10 @@
         </div>
     </div>
 </div>
+
+	
+</div>
+
 
 
 
@@ -129,7 +134,7 @@
 		</div>
 
 		<div class="col-md-2 tile">
-			<i id="thermometer" class="fa fa-thermometer-half icon"></i>
+			<i style="font-size: 200px; line-height: 150px" id="thermometer" class="fa fa-thermometer-half icon"></i>
 		</div>
 
 
@@ -158,26 +163,28 @@
 		</div>
 
 		<div class="col-md-2 tile">
-			<i id="bulb" class="fa fa-lightbulb-o icon" style="font-size:1500%; padding-top: 200%;"></i>
+			<i id="bulb" class="fa fa-lightbulb-o icon" style="font-size:1400%; padding-top: 80%;"></i>
 		</div>
 
-		<div class="col-md-2 tile" onclick="minus_brightness()">
+
+
+		<div class="col-md-2 tile bulb_info" onclick="minus_brightness()">
 			<i class="fa fa-minus-circle icon"></i> 
 		</div>
 
 
-		<div class="col-md-3 tile">
+		<div class="col-md-3 tile bulb_info">
 			<text id="brightness_measurement" class="settings_room">100%</text> <br>
 			<br>
 
 			<label style="align-self: center;" class="switch">
 			  <input type="checkbox" id='bulb_checkbox' onclick="update_light(true)">
-			  <span id="slider" class="slider round" style="margin-top: 100%;"></span>
+			  <span id="slider" class="slider round"></span>
 			</label>
 
 		</div>
 
-		<div class="col-md-2 tile" onclick="plus_brightness()">
+		<div class="col-md-2 tile bulb_info" onclick="plus_brightness()">
 			<i class="fa fa-plus-circle icon"></i>
 		</div>
 

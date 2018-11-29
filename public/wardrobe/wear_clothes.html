@@ -27,6 +27,7 @@
         body {
           background-color: black;
           color: white;
+          overflow: hidden;
         }
 
         .wdb-nav-card {
@@ -117,6 +118,7 @@
         .wardrobe_change_card:hover {
           background-color: #202020;
           cursor: pointer;
+
         }
 
 
@@ -199,10 +201,11 @@
       </div>
 
 
-      <br>
+      <br><br><br><br><br>
       <!-- wardrobe slider -->
+
       <div class="row">
-        <div class="col-md-12 col-sm-12" style="text-align: center"></div>
+        <div class="col-md-7 col-sm-7" style="text-align: center">
         
         <!-- shirts slider -->
           <div id='ninja-slider-shirt'>
@@ -325,79 +328,109 @@
             </div>
           </div> 
 
+          <br><br><br><br>
+
+          <div class="row">
+          
+          <div class="col-md-12 col-sm-12" style="text-align: center">
+          <h3>Other Clothing Items</h3>
+
+          <br><br>
 
 
-      </div> <!-- end sliders row -->
+          <div class="row">
+          <div class="col-md-5 col-sm-5" style="margin-left: 40px">
+            <div class="row wardrobe_change_card" style="border: 1px solid;" onclick="change_to(4)">
+              <div class="col-md-5 col-sm-5" style="text-align: center">
+                <br>
+                <div class="icon-pic">
+                  <img src="../images/wardrobe/hat_white.png" width="100%">
+                </div>
+              </div>
+              <div class="col-md-7 col-sm-7" style="text-align: left"><br><a class="select_w_text">SELECT HATS</a></div>  
+            </div>
+            <br>
+
+            <div class="row wardrobe_change_card" style="border: 1px solid;" onclick="change_to(2)">
+              <div class="col-md-5 col-sm-5" style="text-align: center">
+                <br>
+                <div class="icon-pic">
+                  <img src="../images/wardrobe/shirt_white.png" width="100%">
+                </div>
+              </div>
+              <div class="col-md-7 col-sm-7" style="text-align: left"><br><a class="select_w_text">SELECT SHIRTS</a></div>  
+            </div>
+            <br>
+
+
+            <div class="row wardrobe_change_card" style="border: 1px solid;" onclick="change_to(3)">
+              <div class="col-md-5 col-sm-5" style="text-align: center">
+                <br>
+                <div class="icon-pic">
+                  <img src="../images/wardrobe/coat_white.png" width="100%">
+                </div>
+              </div>
+              <div class="col-md-7 col-sm-7" style="text-align: left"><br><a class="select_w_text">SELECT COATS</a></div>  
+            </div>
+            <br>
+              
+          </div>
+          <div class="col-md-2 col-sm-2">
+          </div>
+          <div class="col-md-5 col-sm-5" style="margin-left: -40px">
+
+            <div class="row wardrobe_change_card" style="border: 1px solid;" onclick="change_to(0)">
+              <div class="col-md-5 col-sm-5" style="text-align: center">
+                <br>
+                <div class="icon-pic">
+                  <img src="../images/wardrobe/pants_white.png" width="100%">
+                </div>
+              </div>
+              <div class="col-md-7 col-sm-7" style="text-align: left"><br><a class="select_w_text">SELECT PANTS</a></div>  
+            </div>
+            <br>
+
+
+            <div class="row wardrobe_change_card" style="border: 1px solid;" onclick="change_to(1)">
+              <div class="col-md-5 col-sm-5" style="text-align: center">
+                <br>
+                <div class="icon-pic">
+                  <img src="../images/wardrobe/shoe_white.png" width="100%">
+                </div>
+              </div>
+              <div class="col-md-7 col-sm-7" style="text-align: left"><br><a class="select_w_text">SELECT SHOES</a></div>  
+            </div>
+
+          </div>            
+          </div>
+
+
+
+        </div>            
+      </div>
+
+
+
+        </div>
+        
+        <div class="col-md-5 col-sm-5">
+          <div class="col-md-7 col-sm-7" style="text-align: center">
+            <h3>Today's look</h3>
+            <canvas id="viewport"></canvas>
+          </div>        
+        </div>
+        </div> <!-- end sliders row -->
+
+      
       <br>
 
       <!-- start other clothes and model row -->
       <div class="row">
         
-        <div class="col-md-5 col-sm-5" style="text-align: center">
-          <h3>Other Clothing Items</h3>
-
-          <br><br>
-          <div class="row wardrobe_change_card" style="border: 2px solid;" onclick="change_to(4)">
-            <div class="col-md-4 col-sm-4" style="text-align: center">
-              <div class="icon-pic">
-                <img src="../images/wardrobe/hat_white.png" width="100%">
-              </div>
-            </div>
-            <div class="col-md-8 col-sm-8" style="text-align: left"><br><br><a class="select_w_text">SELECT HATS</a></div>  
-          </div>
-          <br>
-
-          <div class="row wardrobe_change_card" style="border: 2px solid;" onclick="change_to(2)">
-            <div class="col-md-4 col-sm-4" style="text-align: center">
-              <div class="icon-pic">
-                <img src="../images/wardrobe/shirt_white.png" width="100%">
-              </div>
-            </div>
-            <div class="col-md-8 col-sm-8" style="text-align: left"><br><br><a class="select_w_text">SELECT SHIRTS</a></div>  
-          </div>
-          <br>
-
-
-          <div class="row wardrobe_change_card" style="border: 2px solid;" onclick="change_to(3)">
-            <div class="col-md-4 col-sm-4" style="text-align: center">
-              <div class="icon-pic">
-                <img src="../images/wardrobe/coat_white.png" width="100%">
-              </div>
-            </div>
-            <div class="col-md-8 col-sm-8" style="text-align: left"><br><br><a class="select_w_text">SELECT COATS</a></div>  
-          </div>
-          <br>
-
-
-          <div class="row wardrobe_change_card" style="border: 2px solid;" onclick="change_to(0)">
-            <div class="col-md-4 col-sm-4" style="text-align: center">
-              <div class="icon-pic">
-                <img src="../images/wardrobe/pants_white.png" width="100%">
-              </div>
-            </div>
-            <div class="col-md-8 col-sm-8" style="text-align: left"><br><br><a class="select_w_text">SELECT PANTS</a></div>  
-          </div>
-          <br>
-
-
-          <div class="row wardrobe_change_card" style="border: 2px solid;" onclick="change_to(1)">
-            <div class="col-md-4 col-sm-4" style="text-align: center">
-              <div class="icon-pic">
-                <img src="../images/wardrobe/shoe_white.png" width="100%">
-              </div>
-            </div>
-            <div class="col-md-8 col-sm-8" style="text-align: left"><br><br><a class="select_w_text">SELECT SHOES</a></div>  
-          </div>
-
-        </div>
 
 
 
-        <div class="col-md-7 col-sm-7" style="text-align: center">
-          <h3>Today's look</h3>
-          <canvas id="viewport"></canvas>
 
-        </div>
       </div> <!-- end other clothes and model row -->
 
 
