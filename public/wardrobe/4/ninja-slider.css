@@ -137,6 +137,7 @@
 
 .slider-inner:hover #ninja-slider-prev, .slider-inner:hover #ninja-slider-next {
     opacity:1;
+    background-color: gray !important;
 }
 
 

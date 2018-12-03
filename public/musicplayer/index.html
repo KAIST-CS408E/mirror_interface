@@ -29,7 +29,7 @@
     <!-- Welcome and Time -->
     <div class="container">
       <!-- Heading Row -->
-      <div class="row md-4">
+<!--       <div class="row md-4">
 
         <div class="col-lg-4 col-md-4 col-sm-4">
           <a href="javascript:history.back()" id="back_button" class="mybtn btn btn-block">
@@ -51,6 +51,33 @@
             </div>
           </div>
         </div>
+      </div> -->
+
+
+      <div class="row">
+        
+        <div class="col-md-4 col-sm-4">
+          <a href="/" target="_blank" id="back_button" class="btn btn-block" style="padding: 50px; margin-top: -20px; color:white; font-size: 60px; text-align: left;">
+              <i class="fa fa-chevron-left"></i> Home
+          </a>
+        </div>
+
+        <div class="col-md-4 col-sm-4" style="color: white; text-align: center; font-size: 40px; margin-top: 40px">
+          My Music
+        </div>
+
+        <div class="col-md-4 col-sm-4" style="margin-top: 40px" >
+          <div class="datetime"  align="center">
+            <div >
+              <h1 id="display_time"></h1>
+            </div>
+            <div >
+              <h4 id="display_date"></h3>
+            </div>
+          </div>
+        </div> 
+
+
       </div>
 
     </div>
@@ -67,8 +94,8 @@
           <br>
           <br><br><br><br><br>
           <div class="player_container" align="center">
-            <audio id="audio_player">
-              <source id="audioSource" src="music/lalaland.mp3"></source>
+            <audio id="audio_player" >
+              <source id="audioSource" src="../music/lalaland.mp3"></source>
             </audio>
             <h2 align="center" id="music_title"></h2>
             <a href="#" class="player_button" id="backward_button"><i style="padding: 50px; font-size: 100px; " class="fa fa-backward"></i></a>
@@ -124,10 +151,11 @@
 
 
     <!-- Bootstrap core JavaScript -->
-    <script src="../libs/jquery/jquery.min.js"></script>
-    <script src='https://www.planyo.com/libs/planyonet-fc.js'></script>
-    <script src='https://www.planyo.com/embed-schedule.js'></script>
+    
+    <!-- <script src='https://www.planyo.com/libs/planyonet-fc.js'></script> -->
+    <!-- <script src='https://www.planyo.com/embed-schedule.js'></script> -->
     <script src="../libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../libs/jquery/jquery.min.js"></script>
     <script src="controller.js"></script>
     
     <script >

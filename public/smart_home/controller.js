@@ -1,15 +1,19 @@
 //bathroom - 0, kitchen - 1, living room - 2, bedroom - 3
 var rooms = ['Bathroom', 'Kitchen', 'Living Room', 'Bedroom'];
-var temps = [23, 25, 21, 19]
-var brightness = [20, 70, 50, 40]
-var states = [false, false, false, true]
+var temps = [25, 20, 10, 5]
+var brightness = [20, 40, 0, 80]
+var states = [true, true, false, true]
 
 var bulb_state = false;
 var current_room = 0;
 // var bulb_color = [0, 255, 0]
 
-const max_temp = 26;
+const max_temp = 30;
 const min_temp = 0;
+
+
+
+
 
 function rgb_to_hex() { 
   var hex = Number(arguments[0]).toString(16);
@@ -22,7 +26,7 @@ function rgb_to_hex() {
 
 
 function minus_temp() {
-	temps[current_room]--;
+	temps[current_room] -= 5;
 
 	if (temps[current_room] < min_temp)
 		temps[current_room] = min_temp;
@@ -32,7 +36,7 @@ function minus_temp() {
 }
 
 function plus_temp() {
-	temps[current_room]++;
+	temps[current_room] += 5;
 
 	if (temps[current_room] > max_temp)
 		temps[current_room] = max_temp;
@@ -42,7 +46,7 @@ function plus_temp() {
 }
 
 function minus_brightness() {
-	brightness[current_room] -= 10;
+	brightness[current_room] -= 20;
 
 	if (brightness[current_room] < 0)
 		brightness[current_room] = 0;
@@ -53,7 +57,7 @@ function minus_brightness() {
 }
 
 function plus_brightness() {
-	brightness[current_room] += 10;
+	brightness[current_room] += 20;
 
 	if (brightness[current_room] > 100)
 		brightness[current_room] = 100;
@@ -226,7 +230,7 @@ function ShowSettings() {
         var day = idx_to_day[today.getDay()];
         var month = idx_to_month[today.getMonth()];
         document.getElementById('display_date').innerHTML = day + ", " + month + " " + d  ;
-        document.getElementById('hello_message').innerHTML = hello_message;
+        // document.getElementById('hello_message').innerHTML = hello_message;
         var t = setTimeout(loadTimeDate, 500);
       }
 

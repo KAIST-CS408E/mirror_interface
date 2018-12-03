@@ -22,7 +22,7 @@
 
 <div class="container">
 
-<div class="row md-4">
+<!-- <div class="row md-4">
 	<div class="col-lg-4 col-md-4 col-sm-4" style="margin-left: -50px;">
         <a href="javascript:history.back()" id="back_button" class="mybtn btn btn-block">
         <i style=" font-size: 30px; padding-top: 20px;" class="fa fa-chevron-left"></i> Home
@@ -43,7 +43,35 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
+
+
+      <div class="row">
+        
+        <div class="col-md-4 col-sm-4">
+          <a href="javascript:history.back()" id="back_button" class="btn btn-block" style="padding: 50px; margin-top: -20px; color:white; font-size: 60px; text-align: left;">
+              <i class="fa fa-chevron-left"></i> Home
+          </a>
+        </div>
+
+        <div class="col-md-4 col-sm-4" style="color: white; text-align: center; font-size: 40px; margin-top: 40px">
+          My House
+        </div>
+
+        <div class="col-md-4 col-sm-4" style="margin-top: 40px" >
+          <div class="datetime"  align="center">
+            <div >
+              <h1 id="display_time"></h1>
+            </div>
+            <div >
+              <h4 id="display_date"></h3>
+            </div>
+          </div>
+        </div> 
+
+
+      </div>
+
 
 	
 </div>
@@ -57,7 +85,7 @@
 		<div class="room bathroom" onclick="ShowSettings('0')">
 			<text class="room_name"> Bathroom </text>
 
-			<div class="door_square vertical_door_square" 
+			<div class="door_square vertical_door_square"
 			onclick="open_close_vertical_door('bathroom_door')">
 				
 				<div id="bathroom_door" class="door vertical_door">
@@ -124,7 +152,7 @@
 
 
 		<div class="col-md-2" onclick="CloseSettings()">
-			<i style="float:right;" class="fa fa-times-circle icon"></i>
+			<i style="float:right;font-size: 900% !important;" class="fa fa-times-circle icon"></i>
 		</div>
 
 	</div>

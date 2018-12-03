@@ -16,7 +16,7 @@
     <script src="4/ninja-slider.js" type="text/javascript"></script>
 
     <style>
-    canvas#viewport { border: 1px solid white; margin: auto;}
+    canvas#viewport { border: 1px solid white; margin: auto; background-color: gray}
 
     <style>
         .main-window {
@@ -28,6 +28,7 @@
           background-color: black;
           color: white;
           overflow: hidden;
+          transform: scale(0.8, 0.8) !important;
         }
 
         .wdb-nav-card {
@@ -176,17 +177,17 @@
       <br>
       <div class="row">
         
-        <div class="col-md-3 col-sm-3">
-          <a href="javascript:history.back()" id="back_button" class="btn btn-block" style="color:white; font-size: 25px; text-align: left;">
+        <div class="col-md-4 col-sm-4">
+          <a href="javascript:history.back()" id="back_button" class="btn btn-block" style="padding: 50px; margin-top: -20px; color:white; font-size: 60px; text-align: left;">
               <i class="fa fa-chevron-left"></i> Home
           </a>
         </div>
 
-        <div class="col-md-5 col-sm-5" style="text-align: center; font-size: 25px; margin-top: 15px">
+        <div class="col-md-4 col-sm-4" style="text-align: center; font-size: 40px; margin-top: 40px">
           My Wardrobe : <span id="wtitle">shirts</span>
         </div>
 
-        <div class="col-md-4 col-sm-4">
+        <div class="col-md-4 col-sm-4" style="margin-top: 40px" >
           <div class="datetime"  align="center">
             <div >
               <h1 id="display_time"></h1>
@@ -201,16 +202,16 @@
       </div>
 
 
-      <br><br><br><br><br>
+      <br><br><br>
       <!-- wardrobe slider -->
 
       <div class="row">
-        <div class="col-md-7 col-sm-7" style="text-align: center">
+        <div class="col-md-11 col-sm-11" style="text-align: center;">
         
         <!-- shirts slider -->
-          <div id='ninja-slider-shirt'>
+          <div id='ninja-slider-shirt' >
             <div>
-              <div class="slider-inner">
+              <div class="slider-inner" style="background-color: gray !important;">
                 <ul>
                   <li>
                     <a class="ns-img" onclick="change_clothing(2, 1)" href="../images/wardrobe/new_clothes/shirt1.png"></a>
@@ -232,7 +233,7 @@
         <!-- coats slider -->
           <div id='ninja-slider-coat'>
             <div>
-              <div class="slider-inner">
+              <div class="slider-inner" style="background-color: gray !important;">
                 <ul>
                   <li>
                     <a class="ns-img" onclick="change_clothing(3, 1)" href="../images/wardrobe/new_clothes/coat1.png"></a>
@@ -256,7 +257,7 @@
         <!-- acc slider -->
           <div id='ninja-slider-acc'>
             <div>
-              <div class="slider-inner">
+              <div class="slider-inner" style="background-color: gray !important;">
                 <ul>
                   <li>
                     <a class="ns-img" onclick="change_clothing(4, 1)" href="../images/wardrobe/new_clothes/acc1.png"></a>
@@ -280,7 +281,7 @@
         <!-- shoe slider -->
           <div id='ninja-slider-shoe'>
             <div>
-              <div class="slider-inner">
+              <div class="slider-inner" style="background-color: gray !important;">
                 <ul>
                   <li>
                     <a class="ns-img" onclick="change_clothing(1, 1)" href="../images/wardrobe/new_clothes/shoe1.png"></a>
@@ -304,7 +305,7 @@
         <!-- pants slider -->
           <div id='ninja-slider-pants'>
             <div>
-              <div class="slider-inner">
+              <div class="slider-inner" style="background-color: gray !important;">
                 <ul>
                   <li>
                     <a class="ns-img" onclick="change_clothing(0, 1)" href="../images/wardrobe/new_clothes/pants1.png"></a>
@@ -342,9 +343,9 @@
           <div class="col-md-5 col-sm-5" style="margin-left: 40px">
             <div class="row wardrobe_change_card" style="border: 1px solid;" onclick="change_to(4)">
               <div class="col-md-5 col-sm-5" style="text-align: center">
-                <br>
+                
                 <div class="icon-pic">
-                  <img src="../images/wardrobe/hat_white.png" width="100%">
+                  <img src="../images/wardrobe/hat_white.png" width="80%">
                 </div>
               </div>
               <div class="col-md-7 col-sm-7" style="text-align: left"><br><a class="select_w_text">SELECT HATS</a></div>  
@@ -353,9 +354,9 @@
 
             <div class="row wardrobe_change_card" style="border: 1px solid;" onclick="change_to(2)">
               <div class="col-md-5 col-sm-5" style="text-align: center">
-                <br>
+                
                 <div class="icon-pic">
-                  <img src="../images/wardrobe/shirt_white.png" width="100%">
+                  <img src="../images/wardrobe/shirt_white.png" width="80%">
                 </div>
               </div>
               <div class="col-md-7 col-sm-7" style="text-align: left"><br><a class="select_w_text">SELECT SHIRTS</a></div>  
@@ -365,9 +366,9 @@
 
             <div class="row wardrobe_change_card" style="border: 1px solid;" onclick="change_to(3)">
               <div class="col-md-5 col-sm-5" style="text-align: center">
-                <br>
+                
                 <div class="icon-pic">
-                  <img src="../images/wardrobe/coat_white.png" width="100%">
+                  <img src="../images/wardrobe/coat_white.png" width="80%">
                 </div>
               </div>
               <div class="col-md-7 col-sm-7" style="text-align: left"><br><a class="select_w_text">SELECT COATS</a></div>  
@@ -381,9 +382,9 @@
 
             <div class="row wardrobe_change_card" style="border: 1px solid;" onclick="change_to(0)">
               <div class="col-md-5 col-sm-5" style="text-align: center">
-                <br>
+                
                 <div class="icon-pic">
-                  <img src="../images/wardrobe/pants_white.png" width="100%">
+                  <img src="../images/wardrobe/pants_white.png" width="80%">
                 </div>
               </div>
               <div class="col-md-7 col-sm-7" style="text-align: left"><br><a class="select_w_text">SELECT PANTS</a></div>  
@@ -393,9 +394,8 @@
 
             <div class="row wardrobe_change_card" style="border: 1px solid;" onclick="change_to(1)">
               <div class="col-md-5 col-sm-5" style="text-align: center">
-                <br>
                 <div class="icon-pic">
-                  <img src="../images/wardrobe/shoe_white.png" width="100%">
+                  <img src="../images/wardrobe/shoe_white.png" width="80%">
                 </div>
               </div>
               <div class="col-md-7 col-sm-7" style="text-align: left"><br><a class="select_w_text">SELECT SHOES</a></div>  
@@ -413,7 +413,7 @@
 
         </div>
         
-        <div class="col-md-5 col-sm-5">
+        <div class="col-md-1 col-sm-1">
           <div class="col-md-7 col-sm-7" style="text-align: center">
             <h3>Today's look</h3>
             <canvas id="viewport"></canvas>
@@ -695,7 +695,7 @@
         var day = idx_to_day[today.getDay()];
         var month = idx_to_month[today.getMonth()];
         document.getElementById('display_date').innerHTML = day + ", " + month + " " + d  ;
-        document.getElementById('hello_message').innerHTML = hello_message;
+        // document.getElementById('hello_message').innerHTML = hello_message;
         var t = setTimeout(loadTimeDate, 500);
       }
 

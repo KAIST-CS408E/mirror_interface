@@ -89,6 +89,7 @@ html, body {
 	width: 100px;
 	height: 100px;
 	right: -55px;
+	/*transform: rotate(0deg) !important;*/
 }
 
 .horizontal_door_square {
@@ -99,13 +100,14 @@ html, body {
 .door {
 	position: absolute;
 	background-color: orange;
-	transform: rotate(120deg);
+	
 }
 
 .vertical_door {
 	height: 100px;
-	width: 10px;
-	bottom: -19px;
+	width: 10px;	
+	left:45px;
+	/*bottom: -19px;*/
 }
 
 
@@ -114,6 +116,7 @@ html, body {
 	width: 100px;
 	left: -69px;
 	bottom:2px;
+	transform: rotate(120deg);
 }
 
 .entrance_door_square {

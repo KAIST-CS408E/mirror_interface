@@ -135,7 +135,7 @@
         var day = idx_to_day[today.getDay()];
         var month = idx_to_month[today.getMonth()];
         document.getElementById('display_date').innerHTML = day + ", " + month + " " + d  ;
-        document.getElementById('hello_message').innerHTML = hello_message;
+        // document.getElementById('hello_message').innerHTML = hello_message;
         var t = setTimeout(loadTimeDate, 500);
       }
 

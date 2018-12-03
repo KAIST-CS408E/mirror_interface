@@ -5,7 +5,7 @@
 
 .fc-button {
     width: 200px;
-    height: 70px !important;
+    height: 160px !important;
     margin-right: 60px !important;
     background-color: black !important;
     border-color: white !important;
@@ -559,7 +559,7 @@ a.fc-more:hover{
     padding-bottom:1em
 }
 .fc-basic-view .fc-body .fc-row{
-    min-height:7em
+    min-height:6em
 }
 .fc-row.fc-rigid .fc-content-skeleton{
     position:absolute;

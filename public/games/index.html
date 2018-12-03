@@ -26,9 +26,7 @@
     <!-- Welcome and Time -->
     <div class="container">
       <!-- Heading Row -->
-      <div class="row md-4">
-
-        <!-- Home Button -->
+<!--       <div class="row md-4">
         <div class="col-lg-3 col-md-3 col-sm-3">
           <div class="col-md-4 mb-4">
             <a href="/" id="back_button" class="mybtn btn btn-block">
@@ -38,40 +36,86 @@
         </div>
         <div class="col-lg-6 col-md-6 col-sm-6">
         </div>
-                <!-- Time and Day -->
+                
         <div style="z-index: 100;" class="col-lg-3  col-md-3 col-sm-3">
           <div class="datetime"  align="center">
             <div >
               <h1 id="display_time"></h1>
             </div>
             <div >
-              <h4 id="display_date"></h3>
+              <h4 id="display_date"></h4>
             </div>
           </div>
         </div>
+      </div> -->
+
+      <div class="row">
+        
+        <div class="col-md-4 col-sm-4">
+          <a href="/" id="back_button" class="btn btn-block" style="padding: 50px; margin-top: -20px; color:white; font-size: 60px; text-align: left;">
+              <i class="fa fa-chevron-left"></i> Home
+          </a>
+        </div>
+
+        <div class="col-md-4 col-sm-4" style="color: white; text-align: center; font-size: 40px; margin-top: 40px">
+        </div>
+
+        <div class="col-md-4 col-sm-4" style="margin-top: 40px" >
+          <div class="datetime"  align="center">
+            <div >
+              <h1 ></h1>
+            </div>
+            <div >
+              <h4></h4>
+            </div>
+          </div>
+        </div> 
+
+
+      </div>
+
+
+      <div class="row">
+
 
         <!-- 2048 -->
 
-        <div class="col-lg-12  col-md-12 col-sm-12 text-center" id="2048_page">
+        <div class="col-lg-4  col-md-4 col-sm-4 text-center modes" >
+        <br><br><br>  <br>
+        <div class="col-md-12 mb-4">
+          <a href="#" id="2048_page_button" class="mybtn btn btn-block btn-outline-secondary">2048</a>
+        </div>
+        <br><br><br><br>
+        <div class="col-md-12 mb-4">
+          <a href="#" id="minesweeper_page_button" class="mybtn btn btn-block btn-outline-secondary" style="font-size:30px;">Minesweeper</a>
+        </div>
+        <br><br><br><br>
+        <div class="col-md-12 mb-4">
+          <a href="#" id="checkers_page_button" class="mybtn btn btn-block btn-outline-secondary" style="font-size:30px;">Checkers</a>
+        </div>
+        </div>        
+
+
+        <div class="col-lg-8  col-md-8 col-sm-8 text-right" id="2048_page">
         <div style="" >
-            <object data="2048/index.html" style="width:500px;height:950px; margin-top: -150px; margin-bottom: -30px; transform: scale(0.9, 0.9);" id="2048_game"> 
+            <object data="2048/index.html" style="float: right; width:700px;height:1200px; margin-top: -200px; transform: scale(1.0, 0.9);" id="2048_game"> 
             Your browser doesn’t support the object tag.</object>
           </div>
         </div>
 
         <!-- Minesweeper -->
 
-        <div class="col-lg-12  col-md-12 col-sm-12 text-center" id="minesweeper_page">
-        <div style="" >
-            <object data="minesweeper/index.html" style="margin-top: 100px; margin-bottom: -30px; width:500px;height:700px; transform: scale(1.5, 1.5); z-index: -100;"> 
+        <div class="col-lg-8  col-md-8 col-sm-8 text-right" id="minesweeper_page">
+        <div >
+            <object data="minesweeper/index.html" style="margin-top: 200px; margin-bottom: -30px; width:500px;height:700px; transform: scale(2.1, 2.0); z-index: -100;"> 
             Your browser doesn’t support the object tag. </object>
           </div>
         </div>
 
 
-        <div class="col-lg-12  col-md-12 col-sm-12 text-center" id="checkers_page">
+        <div class="col-lg-8  col-md-8 col-sm-8 text-right" id="checkers_page">
         <div style="" >
-            <object data="checkers/index.html" style="margin-top: 270px; margin-bottom: -200px; width:500px;height:700px;transform: scale(1.7);"> 
+            <object data="checkers/index.html" style="margin-top: 270px; margin-bottom: -200px; width:500px;height:700px;transform: scale(2.1);"> 
             Your browser doesn’t support the object tag. 
           </object>
           </div>
@@ -91,7 +135,7 @@
 
 
       <!-- Content Row -->
-      <div class="modes">
+<!--       <div class="modes">
     <div class="container">
       <div class="row">
         <div class="col-md-4 mb-4">
@@ -106,7 +150,7 @@
       </div>
 
     </div>
-  </div>
+  </div> -->
 
 
 
